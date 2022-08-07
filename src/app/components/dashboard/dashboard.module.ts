@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { ReportesComponent } from './reportes/reportes.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ReportesComponent } from './reportes/reportes.component';
     HomeComponent,
     UsersComponent,
     ReportesComponent,
+    NavbarComponent,
   ],
   imports: [CommonModule, DashboardRoutingModule, SharedModule],
 })
