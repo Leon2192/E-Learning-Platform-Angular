@@ -1,38 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Inscripcion } from 'src/app/interfaces/inscripcion';
-
-const listaInscripciones: Inscripcion[] = [
-  {
-    fecha: '27/8',
-    curso: 'React',
-    horario: '10:00 - 12:00',
-    profesor: 'Lautaro Garcia',
-  },
-  {
-    fecha: '27/8',
-    curso: 'React',
-    horario: '15:00 - 17:00',
-    profesor: 'Genaro Pintos',
-  },
-  {
-    fecha: '27/8',
-    curso: 'React',
-    horario: '19:00 - 21:00',
-    profesor: 'Conrado Lanusse',
-  },
-  {
-    fecha: '30/8',
-    curso: 'React',
-    horario: '15:00 - 17:00',
-    profesor: 'Darío Colombo',
-  },
-  {
-    fecha: '30/8',
-    curso: 'React',
-    horario: '20:00 - 22:00',
-    profesor: 'Leonardo Arrieta',
-  },
-];
+import { InscripcionesService } from 'src/app/services/inscripciones.service';
 
 @Component({
   selector: 'app-users',
@@ -40,9 +11,44 @@ const listaInscripciones: Inscripcion[] = [
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent implements OnInit {
-  displayedColumns: string[] = ['fecha', 'curso', 'horario', 'profesor'];
-  dataSource = listaInscripciones;
-  constructor() {}
+  listInscripcion: Inscripcion[] = [];
 
-  ngOnInit(): void {}
+  displayedColumns: string[] = [
+    'fecha',
+    'curso',
+    'horario',
+    'profesor',
+    'acciones',
+  ];
+
+  dataSource!: MatTableDataSource<any>;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor(private _inscripcionesService: InscripcionesService) {}
+
+  ngOnInit(): void {
+    this.cargarInscripciones();
+  }
+
+  cargarInscripciones() {
+    this.listInscripcion = this._inscripcionesService.getInscripcion();
+    this.dataSource = new MatTableDataSource(this.listInscripcion);
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  eliminarCurso(index: number) {
+    console.log(index);
+    this._inscripcionesService.eliminarCurso(index);
+    this.cargarInscripciones();
+  }
 }

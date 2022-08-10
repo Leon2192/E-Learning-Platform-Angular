@@ -1,0 +1,66 @@
+.card-welcome {
+  height: 480px;
+  background-image: url(https://images.unsplash.com/photo-1632882765546-1ee75f53becb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-welcome mat-card-title {
+  display: flex;
+  margin-left: 5px;
+  height: 50%;
+  align-items: center;
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+}
+
+.card-welcome mat-card-subtitle {
+  font-weight: bold;
+  font-size: 32px;
+  margin-left: 50px;
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button:hover {
+  color: darkviolet;
+}
+
+.cursos h1 {
+  text-align: center;
+  color: darkmagenta;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+}
+
+.card-group-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 330px);
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.card-group-cursos mat-card {
+  padding: 20px;
+  margin: 20px;
+  height: 200px;
+}
+
+.example-card {
+  max-width: 400px;
+  margin-bottom: 8px;
+}
+
+mat-card {
+  background-image: url(https://w0.peakpx.com/wallpaper/870/448/HD-wallpaper-coder-black-logo-minimal-programmer-programming.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

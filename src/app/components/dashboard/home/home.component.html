@@ -1,5 +1,66 @@
 <div class="container">
-  <mat-toolbar>
-    <span>Dashboard</span>
-  </mat-toolbar>
+  <mat-card-title
+    style="
+      text-align: center;
+      color: darkmagenta;
+      font-size: 30px;
+      margin-top: 20px;
+      font-family: 'Raleway', sans-serif;
+    "
+    >¡Bienvenido!</mat-card-title
+  >
+  <br />
+  <mat-card class="card-welcome">
+    <mat-card-title>¡INSCRIPCIONES ABIERTAS!</mat-card-title>
+    <mat-card-subtitle>Aprendé con los mejores </mat-card-subtitle>
+    <mat-card-actions align="end">
+      <button mat-button>VER FECHAS</button>
+      <button mat-button>INSCRIPCIÓN</button>
+    </mat-card-actions>
+  </mat-card>
+  <br />
+  <br />
+  <div class="cursos">
+    <h1>¡Conocé nuestros cursos!</h1>
+    <br />
+    <div class="card-group-cursos">
+      <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>HTML</mat-card-title>
+          <mat-card-subtitle>Principiante</mat-card-subtitle>
+          <img
+            mat-card-sm-image
+            src="https://cdn-icons-png.flaticon.com/512/919/919827.png"
+          />
+        </mat-card-title-group>
+        <mat-card-content> Fundamentos del lenguaje. </mat-card-content>
+      </mat-card>
+      <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>Javascript</mat-card-title>
+          <mat-card-subtitle>Moderado</mat-card-subtitle>
+          <img
+            mat-card-sm-image
+            src="https://cdn.icon-icons.com/icons2/2415/PNG/512/javascript_original_logo_icon_146455.png"
+          />
+        </mat-card-title-group>
+        <mat-card-content>
+          Primeros pasos con el lenguaje más demandado.
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>React</mat-card-title>
+          <mat-card-subtitle>Avanzado</mat-card-subtitle>
+          <img
+            mat-card-sm-image
+            src="https://play-lh.googleusercontent.com/AFY95yFw1P4ErzREpYWiSRyy6GyFA34pc70dP7MuHfkP12alfktC0Rp2ht-LbPAvO5sg"
+          />
+        </mat-card-title-group>
+        <mat-card-content
+          >Te convertirás en un Front-end dev profesional.
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>

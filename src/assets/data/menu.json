@@ -4,8 +4,8 @@
     "redirect": "/dashboard"
   },
   {
-    "nombre": "Inscripciones",
-    "redirect": "/dashboard/usuarios"
+    "nombre": "Cursos",
+    "redirect": "/dashboard/cursos"
   },
   {
     "nombre": "Reportes",
