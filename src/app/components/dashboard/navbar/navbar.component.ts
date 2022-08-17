@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.cargarMenu();
   }
-
+  // Subscribe
   cargarMenu() {
     this._menuService.getMenu().subscribe((data) => {
       this.menu = data;
