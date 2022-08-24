@@ -8,7 +8,11 @@
     "redirect": "/dashboard/cursos"
   },
   {
-    "nombre": "Reportes",
-    "redirect": "/dashboard/reportes"
+    "nombre": "Clases",
+    "redirect": "/dashboard/clases"
+  },
+  {
+    "nombre": "Alumnos",
+    "redirect": "/dashboard/alumnos"
   }
 ]

@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { ReportesComponent } from './reportes/reportes.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AlumnosComponent } from './alumnos/alumnos.component';
+import { ClasesComponent } from './clases/clases.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     UsersComponent,
     ReportesComponent,
     NavbarComponent,
+    AlumnosComponent,
+    ClasesComponent,
   ],
   imports: [CommonModule, DashboardRoutingModule, SharedModule],
 })
